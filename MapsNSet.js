@@ -37,16 +37,16 @@ console.log(str2);
 let str1 = "abcadeecfb";
 let N1 = str1.length;
 let arr = str1.split("");
-let f = new Map()
+let freq = new Map()
 for(let i = 0; i < arr.length; i++){
-    if(f.has(arr[i]) == true){
-        let val = f.get(arr[i])
-        f.set(arr[i] , val+1);
+    if(freq.has(arr[i]) == true){
+        let val = freq.get(arr[i])
+        freq.set(arr[i] , val+1);
     }
     else{
-        f.set(arr[i] , 1)
+        freq.set(arr[i] , 1)
     }
 }
-for(let i of f){
+for(let i of freq){
     console.log(i[0] + "=" + i[1]);
 }
